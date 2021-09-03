@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const handlebars = require("express-handlebars")
 const bodyParser = require('body-parser')
+const path = require("path")
 
 //Handlebars
  app.engine("handlebars",handlebars({defaultLayout: 'main'}))
@@ -9,6 +10,8 @@ const bodyParser = require('body-parser')
 //BodyParser
  app.use(bodyParser.urlencoded({extended: false}))
  app.use(bodyParser.json())
+//BootStrap
+app.use(express.static(path.join(__dirname,"public")))
 
 //rotas
  
