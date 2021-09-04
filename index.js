@@ -14,6 +14,10 @@ const path = require("path")
 app.use(express.static(path.join(__dirname,"public")))
 
 //rotas
+
+app.get("/",(req,res) => {
+	res.render("home.handlebars")
+})
  
 
 
