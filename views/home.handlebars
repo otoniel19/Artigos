@@ -1,1 +1,16 @@
-<button class="btn btn-sucess">OK</button>
+<center>
+<a href="/artigo"><button class="btn btn-sucess">Criar Artigo</button></a>	
+<br><br>
+<h2>Artigos</h2>
+<br>
+{{#each dados}}
+<div class="card">
+	<div class="card-body">
+		<h2>{{dataValues.nome}}</h2>
+		<a href="/artigo={{dataValues.id}}"><button class="btn btn-sucess">Ver Artigo</button></a>
+	</div>
+</div>
+<br>
+{{/each}}
+
+</center>
